@@ -1,0 +1,16 @@
+
+ƒ
+java:S1192!"aDefine a constant instead of duplicating this literal "ê³„ì¢Œ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”" 3 times.(çˆéªÿÿÿÿÿ8®¡º³³1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É…åÎûÿÿÿÿ8°¡º³³1
+S
+java:S18542"6Remove this useless assignment to local variable "tc".(Öì¶†8¹¡º³³1
+D
+java:S14812"'Remove this unused "tc" local variable.(Öì¶†8¼¡º³³1
+G	java:S106A"+Replace this use of System.out by a logger.(†Şµ8¾¡º³³1
+L	java:S106D"+Replace this use of System.out by a logger.(ïÏÅøÿÿÿÿ8¾¡º³³1
+G	java:S106E"+Replace this use of System.out by a logger.(ÕåäÇ8¿¡º³³1
+G	java:S106F"+Replace this use of System.out by a logger.(ŒØÉ8¿¡º³³1
+G	java:S106G"+Replace this use of System.out by a logger.(¯×¦¶8¿¡º³³1
+G	java:S106H"+Replace this use of System.out by a logger.(‘ÆÌÉ8¿¡º³³1
+L	java:S106I"+Replace this use of System.out by a logger.(³†Ï±ùÿÿÿÿ8À¡º³³1
+L	java:S106J"+Replace this use of System.out by a logger.(ÕÑ™³şÿÿÿÿ8À¡º³³1

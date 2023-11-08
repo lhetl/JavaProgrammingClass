@@ -1,0 +1,13 @@
+
+}
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "ans".(¶º¹…şÿÿÿÿ8ËÊ£¸1
+]
+java:S2184
+"ACast one of the operands of this division operation to a "float".(¢¶Ü8ÌÊ£¸1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÏÈ™è8ÌÊ£¸1
+K
+java:S1905")Remove this unnecessary cast to "double".(¶º¹…şÿÿÿÿ8ğÊ£¸1
+L	java:S106"+Replace this use of System.out by a logger.(áÎÂÎûÿÿÿÿ8òÊ£¸1
+F	java:S106"+Replace this use of System.out by a logger.(áàØg8öÊ£¸1
+S
+java:S1128"6Remove this unused import 'Example.Example1.CheckNum'.(­ï¾ú8øÊ£¸1

@@ -1,0 +1,11 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ç‘ñ–
+d
+java:S2094"BRemove this empty class, write its code or make it an "interface".(õŞ¥’ÿÿÿÿÿ8ãñ»¿³1
+X	java:S125	"<This block of commented-out lines of code should be removed.(–…Úš8äñ»¿³1
+]
+java:S1128"@Remove this unused import 'OrientAssignment2.Boundary.KeyBoard'.(üö»8„™í¿³1
+`
+java:S1128">Remove this unused import 'OrientAssignment2.Boundary.Screen'.(ß†‚Õüÿÿÿÿ8„™í¿³1
+_
+java:S1128"=Remove this unused import 'OrientAssignment2.Entity.Account'.(™¦Ñÿÿÿÿÿ8„™í¿³1

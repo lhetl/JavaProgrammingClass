@@ -1,0 +1,11 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Î÷†‚ÿÿÿÿÿ8†Ê£¸1
+{
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8Ê£¸1
+X	java:S125
+"<This block of commented-out lines of code should be removed.(–¯Î¸8Ê£¸1
+X	java:S125"<This block of commented-out lines of code should be removed.(–¯Î¸8•Ê£¸1
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(øÇ—úÿÿÿÿ8–Ê£¸1
+M
+java:S1068"+Remove this unused "balance" private field.(¥Üµ“ÿÿÿÿÿ8˜Ê£¸1
