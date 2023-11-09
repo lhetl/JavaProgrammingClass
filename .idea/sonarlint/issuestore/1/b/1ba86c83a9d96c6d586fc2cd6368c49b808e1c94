@@ -1,16 +1,0 @@
-
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(éµ«®8†Ò´Õº1
-?
-java:S1659
-""Declare "acc2" on a separate line.(æÅŸ8ˆÒ´Õº1
-G	java:S106"+Replace this use of System.out by a logger.(†Şµ8Ò´Õº1
-L	java:S106!"+Replace this use of System.out by a logger.(ïÏÅøÿÿÿÿ8Ò´Õº1
-G	java:S106""+Replace this use of System.out by a logger.(ÕåäÇ8Ò´Õº1
-G	java:S106#"+Replace this use of System.out by a logger.(ŒØÉ8Ò´Õº1
-G	java:S106$"+Replace this use of System.out by a logger.(¯×¦¶8Ò´Õº1
-G	java:S106%"+Replace this use of System.out by a logger.(‘ÆÌÉ8Ò´Õº1
-L	java:S106&"+Replace this use of System.out by a logger.(³†Ï±ùÿÿÿÿ8Ò´Õº1
-L	java:S106'"+Replace this use of System.out by a logger.(ÕÑ™³şÿÿÿÿ8Ò´Õº1
-E
-java:S1068
-"(Remove this unused "acc1" private field.(æÅŸ8Ò´Õº1
