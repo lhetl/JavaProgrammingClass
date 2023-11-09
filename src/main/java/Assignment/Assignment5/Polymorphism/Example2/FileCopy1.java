@@ -1,11 +1,11 @@
-package Assignment.Assignment5.Example2;
+package Assignment.Assignment5.Polymorphism.Example2;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class FileCopy { // 예외 처리 방법(1) - 예외 처리기
+public class FileCopy1 { // 예외 처리 방법(1) - 예외 처리기
     public static void main(String[] args) {
         FileInputStream in = null;
         FileOutputStream out = null;

@@ -1,4 +1,7 @@
-package Assignment.Assignment5.Example1;
+package Assignment.Assignment5.Polymorphism.Example1;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
 
 public class Demo {
     public static void main(String[] args) {
