@@ -1,6 +1,6 @@
 package Assignment.Assignment3.B.Question10_9;
 
-public class Test {
+public class Test10_9 {
     public static void main(String[] args) {
         Course course= new Course("Test");
         String[] studentList={"first","second","third"};

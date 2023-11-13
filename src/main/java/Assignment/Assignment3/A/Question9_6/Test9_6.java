@@ -1,6 +1,6 @@
 package Assignment.Assignment3.A.Question9_6;
 
-public class Test {
+public class Test9_6 {
     public static void main(String[] args) {
         StopWatch sw1=new StopWatch();
         int[] arr=new int[100000];

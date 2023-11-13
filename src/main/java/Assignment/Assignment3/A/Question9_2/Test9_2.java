@@ -1,6 +1,6 @@
 package Assignment.Assignment3.A.Question9_2;
 
-public class Test {
+public class Test9_2 {
     public static void main(String[] args) {
         Stock stock1= new Stock("ORCL","Oracle Corporation");
         stock1.setPreviousClosingPrice(34.5);

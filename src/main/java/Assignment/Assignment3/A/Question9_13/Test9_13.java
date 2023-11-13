@@ -2,7 +2,7 @@ package Assignment.Assignment3.A.Question9_13;
 
 import java.util.Scanner;
 
-public class Test {
+public class Test9_13 {
     public static Location locateLargest(double[][] a){
         double maxVal=Double.MIN_VALUE;
         Location locate = new Location(0,0,0);

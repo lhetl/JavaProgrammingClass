@@ -1,6 +1,6 @@
 package Assignment.Assignment3.A.Question9_9;
 
-public class Test {
+public class Test9_8 {
     public static void main(String[] args) {
         RegularPolygon r1=new RegularPolygon();
         RegularPolygon r2=new RegularPolygon(6,4);

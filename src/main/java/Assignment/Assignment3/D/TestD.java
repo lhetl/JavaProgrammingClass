@@ -1,6 +1,6 @@
 package Assignment.Assignment3.D;
 
-public class Test {
+public class TestD {
     public static void main(String[] args) {
         Subject s1= new Subject(0,"FP0001","지도교수상담","0-0-0-0",1,
                 "학교육인증과정 대상학부의 인증과정 및 비인증과정 학생의 지도교수는...",SubjectType.MAJOR_SELECT);

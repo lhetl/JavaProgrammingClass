@@ -1,6 +1,6 @@
 package Assignment.Assignment3.B.Question10_1;
 
-public class Test {
+public class Test10_1 {
     public static void main(String[] args) {
         Time t1 = new Time();
         Time t2 = new Time(555550000);

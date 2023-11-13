@@ -1,6 +1,6 @@
 package Assignment.Assignment3.B.Question10_8;
 
-public class Test {
+public class Test10_8 {
     public static void main(String[] args) {
         double[] rates2001= {0.15,0.275,0.305,0.355,0.391};
         double[] rates2009={0.1,0.15,0.25,0.28,0.33,0.35};

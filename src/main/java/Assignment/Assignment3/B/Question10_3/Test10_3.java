@@ -1,6 +1,6 @@
 package Assignment.Assignment3.B.Question10_3;
 
-public class Test {
+public class Test10_3 {
     public static void main(String[] args) {
         MyInteger oddInteger = new MyInteger(7);
         MyInteger evenInteger = new MyInteger(8);

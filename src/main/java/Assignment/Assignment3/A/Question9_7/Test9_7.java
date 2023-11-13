@@ -1,6 +1,6 @@
 package Assignment.Assignment3.A.Question9_7;
 
-public class Test {
+public class Test9_7 {
     public static void main(String[] args) {
         Account acc1=new Account(1122,20000);
         acc1.setAnnualInterestRate(4.5);

@@ -1,6 +1,6 @@
 package Assignment.Assignment3.A.Question9_1;
 
-public class Test {
+public class Test9_1 {
     public static void main(String[] args) {
         Rectangle rec1=new Rectangle(4,40);
         Rectangle rec2=new Rectangle(3.5,35.9);

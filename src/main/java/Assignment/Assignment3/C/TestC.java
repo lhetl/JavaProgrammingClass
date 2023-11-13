@@ -2,7 +2,7 @@ package Assignment.Assignment3.C;
 
 import java.util.Calendar;
 
-public class Test {
+public class TestC {
     public static void main(String[] args) {
         Calendar s1=Calendar.getInstance();
         Calendar s2=Calendar.getInstance();
