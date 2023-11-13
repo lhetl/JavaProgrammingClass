@@ -40,4 +40,7 @@ public class Time {
         tmpTime%=60;
         this.sec=tmpTime;
     }
+    public String toString() {
+        return hour+" Hour   " +min+ " Min   " +sec +" Sec";
+    }
 }
