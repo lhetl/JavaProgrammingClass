@@ -29,7 +29,7 @@ public class MyInteger {
         return isEven(this.value);
     }
     public boolean isOdd(){
-        return isEven(this.value);
+        return isOdd(this.value);
     }
     public boolean isPrime(){
         return isPrime(this.value);

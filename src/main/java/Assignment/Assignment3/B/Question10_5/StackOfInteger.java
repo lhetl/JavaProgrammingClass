@@ -1,8 +1,4 @@
 package Assignment.Assignment3.B.Question10_5;
-
-import java.util.Arrays;
-import java.util.Stack;
-
 public class StackOfInteger {
     private int[] elements;
     private int size;

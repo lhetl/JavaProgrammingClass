@@ -65,7 +65,7 @@ public class Subject{
     public String toString() {
         return "과목명: " +subjectName+
                 ", 학년: " + requiredGrade +
-                ", 과목코드: " + subjectCode + '\'' +
+                ", 과목코드: " + subjectCode +
                 ", 학점: " + reBuild() + ", "+semester+"학기" +
                 ", 과목 종류: " + subjectType;
     }
