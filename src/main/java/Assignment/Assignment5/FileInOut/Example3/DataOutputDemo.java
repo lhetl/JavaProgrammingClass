@@ -1,4 +1,6 @@
-package Assignment.Assignment5.Example3;
+package Assignment.Assignment5.FileInOut.Example3;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
@@ -7,7 +9,7 @@ import java.io.IOException;
 
 public class DataOutputDemo {
     public static void main(String[] args) throws IOException {
-        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Example3\\";
+        String path= Path.getPath(3);
         // 출력 데이터 스트림 생성
         DataOutputStream dos = new DataOutputStream(
                 new BufferedOutputStream(new FileOutputStream(path+args[0]+".dat")));

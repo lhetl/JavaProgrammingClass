@@ -1,4 +1,4 @@
-package Assignment.Assignment5.Example5;
+package Assignment.Assignment5.FileInOut.Example5;
 
 import java.io.*;
 class Order implements Serializable { // 객체 읽기/쓰기 위해 필수

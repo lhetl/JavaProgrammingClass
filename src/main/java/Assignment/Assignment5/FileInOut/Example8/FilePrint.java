@@ -1,4 +1,6 @@
-package Assignment.Assignment5.Example8;
+package Assignment.Assignment5.FileInOut.Example8;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,7 +9,7 @@ import java.io.RandomAccessFile;
 class FilePrint {
     public static void main (String args[]) throws IOException {
         char c;
-        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Example8\\";
+        String path= Path.getPath(8);
 
         RandomAccessFile file = new RandomAccessFile(path+args[0]+".dat", "rw");
 

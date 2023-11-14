@@ -1,4 +1,4 @@
-package Assignment.Assignment5.Example1;
+package Assignment.Assignment5.FileInOut.Example1;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

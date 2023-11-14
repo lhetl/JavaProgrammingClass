@@ -1,10 +1,13 @@
-package Assignment.Assignment5.Example7;
+package Assignment.Assignment5.FileInOut.Example7;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.*;
 import java.util.Scanner;
 import java.lang.Object;
 public class FileCopy {
     public static void main(String[] args) {
+        String path= Path.getPath(7);
         if (args.length != 2) {
             System.out.println("java FileCopy <소스파일> <목적파일>");
         } else {

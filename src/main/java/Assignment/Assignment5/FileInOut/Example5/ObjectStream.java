@@ -1,11 +1,13 @@
-package Assignment.Assignment5.Example5;
+package Assignment.Assignment5.FileInOut.Example5;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.*;
 
 public class ObjectStream {
     public static void main(String[] args)
             throws IOException, ClassNotFoundException {
-        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Example5\\";
+        String path= Path.getPath(5);
         Order[] orders = {
                 new Order("10분의 기적", 10.0f, 10),
                 new Order("소크라테스에서 포스트모드니즘까지", 20.0f, 100),

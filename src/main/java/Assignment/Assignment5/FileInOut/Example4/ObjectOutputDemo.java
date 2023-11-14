@@ -1,4 +1,6 @@
-package Assignment.Assignment5.Example4;
+package Assignment.Assignment5.FileInOut.Example4;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -7,7 +9,7 @@ import java.util.Date;
 
 public class ObjectOutputDemo {
     public static void main(String[] args) throws IOException {
-        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Example4\\";
+        String path= Path.getPath(4);
         // 출력 객체 스트림 생성
         ObjectOutputStream oos =
                 new ObjectOutputStream( new FileOutputStream(path+args[0]+".dat") );

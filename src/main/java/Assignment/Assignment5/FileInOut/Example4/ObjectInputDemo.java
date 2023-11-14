@@ -1,4 +1,6 @@
-package Assignment.Assignment5.Example4;
+package Assignment.Assignment5.FileInOut.Example4;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,7 +9,7 @@ import java.util.Date;
 
 public class ObjectInputDemo {
     public static void main(String[] args)throws IOException, ClassNotFoundException {
-        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Example4\\";
+        String path= Path.getPath(4);
         // 입력 객체 스트림 생성
         ObjectInputStream ois =
                 new ObjectInputStream( new FileInputStream(path+args[0]+".dat") );

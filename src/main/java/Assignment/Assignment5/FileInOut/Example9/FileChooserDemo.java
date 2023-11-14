@@ -1,4 +1,4 @@
-package Assignment.Assignment5.Example9;
+package Assignment.Assignment5.FileInOut.Example9;
 
 import java.util.Scanner;
 import javax.swing.*;

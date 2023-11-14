@@ -1,11 +1,13 @@
-package Assignment.Assignment5.Example8;
+package Assignment.Assignment5.FileInOut.Example8;
+
+import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class RandomAccessFileDemo {
     public static void main(String[] args) throws IOException {
-        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Example8\\";
+        String path= Path.getPath(8);
         try (RandomAccessFile inout = new RandomAccessFile(path+"inout.dat", "rw")) {
             inout.setLength(0); // 파일 존재 時 내용 지움
 
