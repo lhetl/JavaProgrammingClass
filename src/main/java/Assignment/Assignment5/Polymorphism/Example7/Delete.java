@@ -4,8 +4,9 @@ import java.io.File;
 
 public class Delete {
     public static void main(String... args) {
+        String path= System.getProperty("user.dir")+"\\src\\main\\java\\Assignment\\Assignment5\\Polymorphism\\Example7\\";
         try {
-            File f = new File(args[0]);
+            File f = new File(path+args[0]);
 
             if ( !f.exists() )
                 throw new IllegalArgumentException("파일 없음: " + args[0]);

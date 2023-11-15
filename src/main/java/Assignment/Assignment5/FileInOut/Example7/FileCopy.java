@@ -4,7 +4,6 @@ import Assignment.Assignment5.FileInOut.Path;
 
 import java.io.*;
 import java.util.Scanner;
-import java.lang.Object;
 public class FileCopy {
     public static void main(String[] args) {
         String path= Path.getPath(7);
@@ -12,14 +11,13 @@ public class FileCopy {
             System.out.println("java FileCopy <소스파일> <목적파일>");
         } else {
             try {
-                copy(args[0], args[1]);
+                copy(path+args[0], path+args[1]);
             } catch (IOException e) {
                 System.err.println(e.getMessage());
             }
         }
     } // end of main()
     public static void copy(String from, String to) throws IOException {
-        Thread t = new Thread();
         File fromFile = new File(from);
         File toFile = new File(to);
 

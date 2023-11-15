@@ -20,8 +20,10 @@ public class ObjectInputDemo {
         // (주의) 타입변환 時 ClassNotFoundException 발생 가능
 
         // primitive-type 값 읽기
-        char c = ois.readChar();			boolean b = ois.readBoolean();
-        double d = ois.readDouble();		String s = ois.readUTF();
+        char c = ois.readChar();
+        boolean b = ois.readBoolean();
+        double d = ois.readDouble();
+        String s = ois.readUTF();
         System.out.println(c);
         System.out.println(d);
         System.out.println(b);

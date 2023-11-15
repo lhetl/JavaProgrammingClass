@@ -6,8 +6,8 @@ public class Copy1 {
         FileReader in = null;
         FileWriter out = null;
         try {
-            in = new FileReader("sourceFile");
-            out = new FileWriter("targetFile");
+            in = new FileReader("sourceFile.dat");
+            out = new FileWriter("targetFile.dat");
             int c;
             while ((c = in.read()) != -1) { // EOF 검사
                 out.write(c);

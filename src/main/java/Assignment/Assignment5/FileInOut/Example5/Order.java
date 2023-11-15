@@ -11,8 +11,13 @@ class Order implements Serializable { // 객체 읽기/쓰기 위해 필수
         price = p;
         unit = u;
     }
-
-    public String 	getTitle() 	{ return title; }
-    public float 	getPrice() 	{ return price; }
-    public int getUnit() 	{ return unit; }
+    public String getTitle(){
+        return title;
+    }
+    public float getPrice(){
+        return price;
+    }
+    public int getUnit(){
+        return unit;
+    }
 }

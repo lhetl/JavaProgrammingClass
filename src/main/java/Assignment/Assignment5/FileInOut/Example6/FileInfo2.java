@@ -9,11 +9,11 @@ import java.util.Date;
 class FileInfo2 {
     public static void main(String[] args) throws IOException {
         String path= Path.getPath(6);
-        File f = new File(path+args[0]); //args : 파일 이름 입력
+        File f = new File(path+args[0]);
         if (f.exists()) {
-            if (f.isFile()) printProperty(f); // long format
+            if (f.isFile()) printProperty(f);
             else {
-                File[] entries = f.listFiles(); // directory listing
+                File[] entries = f.listFiles();
                 for (File x : entries) printProperty(x);
             }
         }

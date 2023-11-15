@@ -18,8 +18,10 @@ public class ObjectOutputDemo {
         oos.writeObject( new Date() ); // (주의) Serializable 객체
 
         // primitive-type 값 쓰기도 가능함
-        oos.writeChar('A');		oos.writeBoolean(true);
-        oos.writeDouble(100.0);	oos.writeUTF("abc");
+        oos.writeChar('A');
+        oos.writeBoolean(true);
+        oos.writeDouble(100.0);
+        oos.writeUTF("abc");
 
         // 스트림 닫기
         oos.close();
