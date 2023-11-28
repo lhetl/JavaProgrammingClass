@@ -1,5 +1,0 @@
-package Assignment.Assignment3.B.Question10_8;
-
-public enum FilingStatus {
-    SINGLE_FILER,MARRIED_JOINTLY_OR_QUALIFYING_WIDOW_ER,MARRIED_FILING_SEPARATELY,HEAD_OF_HOUSEHOLD
-}
