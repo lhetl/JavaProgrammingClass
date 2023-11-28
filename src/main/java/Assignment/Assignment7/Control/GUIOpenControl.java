@@ -14,10 +14,10 @@ public class GUIOpenControl {
         IAccount account=null;
         if (type=='N'){
             account=new NormalAccount(accountNumber,amount);
-            scr.displayMessage("계좌 번호: "+accountNumber+"  금액: "+amount+" 인 Normal 계좌가 생성되었습니다");
+            scr.displayMessage("계좌 번호: "+accountNumber+"  금액: "+amount+" 인 \nNormal 계좌가 생성되었습니다");
         }else if(type=='M'){
             account=new MinusAccount(accountNumber,amount,creditAmount);
-            scr.displayMessage("계좌 번호: "+accountNumber+"  금액: "+amount+" 한도 금액: "+creditAmount+"인 Minus 계좌가 생성되었습니다");
+            scr.displayMessage("계좌 번호: "+accountNumber+"  금액: "+amount+" 한도 금액: "+creditAmount+"인 \nMinus 계좌가 생성되었습니다");
         }
         return account;
     }

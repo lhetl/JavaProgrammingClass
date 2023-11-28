@@ -40,7 +40,7 @@ public class GUI{
         try{
             String[] tmp=this.numberTextField.getText().split(splitText);
             if (tmp.length!=textLength){
-                int a=1/0;
+                throw new IndexOutOfBoundsException();
             }
             int[] tmp2=new int[textLength];
             for (int i=0;i<tmp2.length;i++){
@@ -120,7 +120,7 @@ public class GUI{
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
-        resultTextPane.setFont(new Font(resultTextPane.getFont().getFontName(),Font.BOLD,15));
+        resultTextPane.setFont(new Font(resultTextPane.getFont().getFontName(),Font.BOLD,12));
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx=0;
@@ -137,52 +137,59 @@ public class GUI{
         jframe.add(buttonPanel,gbc);
         gbc.gridx=0;
         gbc.gridy=16;
-        gbc.gridheight=2;
+        gbc.gridheight=4;
         gbc.gridwidth=10;
         gbc.fill=GridBagConstraints.BOTH;
         jframe.add(resultTextPane, gbc);
 
         jframe.pack();
-        jframe.setMinimumSize(new Dimension(500,500));
+        jframe.setMinimumSize(new Dimension(600,500));
         jframe.setVisible(true);
     }
 
     private void handleDeposit() {
-        Integer number = getNumberTextInt();
-        if (number != null){
-            IAccount acc = getAccount(number);
-            if (acc!=null) {
-                new DepositControl().execute(acc, screen, keyBoard);
-            }else{
-                screen.displayMessage("계좌가 존재하지 않습니다");
+        try {
+            Integer number = getNumberTextInt();
+            if (number != null) {
+                IAccount acc = getAccount(number);
+                if (acc != null) {
+                    new DepositControl().execute(acc, screen, keyBoard);
+                } else {
+                    screen.displayMessage("계좌가 존재하지 않습니다");
+                }
             }
+        }catch(Exception e){
+            screen.displayMessage("잘못된 값이 입력되었습니다.");
         }
 
     }
-
     private void handleWithdraw() {
-        Integer number = getNumberTextInt();
-        if (number != null) {
-            IAccount acc = getAccount(number);
-            if (acc!=null){
-                new WithdrawControl().execute(acc, screen, keyBoard);
-            }else{
-                screen.displayMessage("계좌가 존재하지 않습니다");
+        try {
+            Integer number = getNumberTextInt();
+            if (number != null) {
+                IAccount acc = getAccount(number);
+                if (acc != null) {
+                    new WithdrawControl().execute(acc, screen, keyBoard);
+                } else {
+                    screen.displayMessage("계좌가 존재하지 않습니다");
+                }
             }
+        }catch(Exception e){
+            screen.displayMessage("잘못된 값이 입력되었습니다.");
         }
     }
 
     private void handleBalance() {
-        Integer number = getNumberTextInt();
-        if (number != null){
-            IAccount acc = getAccount(number);
-            if (acc!=null){
-                new InquiryControl().execute(acc, screen);
-            }else{
-                screen.displayMessage("계좌가 존재하지 않습니다");
+            Integer number = getNumberTextInt();
+            if (number != null){
+                IAccount acc = getAccount(number);
+                if (acc!=null){
+                    new InquiryControl().execute(acc, screen);
+                }else{
+                    screen.displayMessage("계좌가 존재하지 않습니다");
+                }
             }
 
-        }
     }
 
     private void handleOpen() {
@@ -218,13 +225,12 @@ public class GUI{
     }
 
     public IAccount getAccount(int number){
-        IAccount account=null;
-        for (IAccount acc : this.accountList){
-            if (acc.getAccountNumber()==number){
-                account=acc;
+        for (IAccount accountTmp : this.accountList){
+            if (accountTmp.getAccountNumber()==number){
+                return accountTmp;
             }
         }
-        return account;
+        return null;
     }
 }
 
