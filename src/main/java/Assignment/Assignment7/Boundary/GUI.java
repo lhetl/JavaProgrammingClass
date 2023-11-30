@@ -21,7 +21,7 @@ public class GUI{
     private GUIScreen screen;
     private GUIKeyboard keyBoard;
     private List<IAccount> accountList=new ArrayList<>();
-    public Integer getFieldTextInt(){
+    public Integer getFieldTextInt(){ // 가격 텍스트 필드 int 값 체크 + 가져오기
         try {
             int tmp=Integer.parseInt(this.amountTextField.getText());
             return tmp;
@@ -32,11 +32,11 @@ public class GUI{
     }
     public String getFieldText(){
         return this.amountTextField.getText();
-    }
+    } // 가격 텍스트 필드 그대로 가져오기
     public String getNumberText(){
         return this.numberTextField.getText();
-    }
-    public int[] getNumberTextSplit(int textLength,String splitText){
+    } // 계좌번호 텍스트 필드 그대로 가져오기
+    public int[] getNumberTextSplit(int textLength,String splitText){ //계좌 번호 텍스트 필드 끊어서 가져오기
         try{
             String[] tmp=this.numberTextField.getText().split(splitText);
             if (tmp.length!=textLength){
@@ -52,7 +52,7 @@ public class GUI{
             return null;
         }
     }
-    public Integer getNumberTextInt(){
+    public Integer getNumberTextInt(){  //계좌 번호 텍스트 필드 int값 체크 + 가져오기
         try {
             int tmp=Integer.parseInt(this.numberTextField.getText());
             return tmp;
@@ -62,7 +62,7 @@ public class GUI{
         }
 
     }
-    public void setText(String msg){
+    public void setText(String msg){ //결과 텍스트 값 설정
         this.resultTextPane.setText("결과: \n"+msg);
 
     }
@@ -71,17 +71,17 @@ public class GUI{
         this.screen = new GUIScreen(this);
         this.keyBoard = new GUIKeyboard(this);
 
-        IAccount acc1 = new NormalAccount(1, 10000);
+        IAccount acc1 = new NormalAccount(1, 10000); //계좌 기본값
         IAccount acc2 = new MinusAccount(2, 50000, 10000);
 
         this.accountList.add(acc1);
         this.accountList.add(acc2);
 
-        jframe.setTitle("은행 애플리케이션");
+        jframe.setTitle("은행 애플리케이션"); //frame 기본 설정
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setLayout(new GridBagLayout());
 
-        JPanel inputPanel = new JPanel(new FlowLayout());
+        JPanel inputPanel = new JPanel(new FlowLayout()); // 필드 패널 설정
 
         JLabel amountLabel = new JLabel("금액:");
         amountTextField = new JTextField(10);
@@ -93,7 +93,7 @@ public class GUI{
         inputPanel.add(accountNumberLabel);
         inputPanel.add(numberTextField);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(3, 2));
+        JPanel buttonPanel = new JPanel(new GridLayout(3, 2));   //버튼 패널 설정
         buttonPanel.setPreferredSize(new Dimension((int) jframe.getSize().getWidth(),200));
         JButton depositButton = new JButton("입금");
         JButton withdrawButton = new JButton("출금");
@@ -108,13 +108,13 @@ public class GUI{
         buttonPanel.add(openButton);
         buttonPanel.add(transferButton);
 
-        depositButton.addActionListener(e -> handleDeposit());
+        depositButton.addActionListener(e -> handleDeposit());  //버튼 이벤트 설정
         withdrawButton.addActionListener(e -> handleWithdraw());
         balanceButton.addActionListener(e -> handleBalance());
         openButton.addActionListener(e -> handleOpen());
         transferButton.addActionListener(e -> handleTransfer());
 
-        resultTextPane = new JTextPane();
+        resultTextPane = new JTextPane();  //결과 박스 설정
         resultTextPane.setEditable(false);
         StyledDocument doc = resultTextPane.getStyledDocument();
         SimpleAttributeSet center = new SimpleAttributeSet();
@@ -122,7 +122,7 @@ public class GUI{
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
         resultTextPane.setFont(new Font(resultTextPane.getFont().getFontName(),Font.BOLD,12));
 
-        GridBagConstraints gbc = new GridBagConstraints();
+        GridBagConstraints gbc = new GridBagConstraints(); // 각 프레임 메인 프레임에 추가(gridbag 사용)
         gbc.gridx=0;
         gbc.gridy=0;
         gbc.gridheight=1;
@@ -142,12 +142,12 @@ public class GUI{
         gbc.fill=GridBagConstraints.BOTH;
         jframe.add(resultTextPane, gbc);
 
-        jframe.pack();
+        jframe.pack();  //프레임 보여주기 설정
         jframe.setMinimumSize(new Dimension(600,500));
         jframe.setVisible(true);
     }
 
-    private void handleDeposit() {
+    private void handleDeposit() { //입금 이벤트 메소드
         try {
             Integer number = getNumberTextInt();
             if (number != null) {
@@ -163,7 +163,7 @@ public class GUI{
         }
 
     }
-    private void handleWithdraw() {
+    private void handleWithdraw() { //출금 이벤트 메소드
         try {
             Integer number = getNumberTextInt();
             if (number != null) {
@@ -179,7 +179,7 @@ public class GUI{
         }
     }
 
-    private void handleBalance() {
+    private void handleBalance() { //계좌 금액 확인 메소드
             Integer number = getNumberTextInt();
             if (number != null){
                 IAccount acc = getAccount(number);
@@ -192,7 +192,7 @@ public class GUI{
 
     }
 
-    private void handleOpen() {
+    private void handleOpen() { //새 계좌 생성 메소드
         try {
             String[] tmp = getFieldText().split(",");
             int amount = Integer.parseInt(tmp[0]);
@@ -211,7 +211,7 @@ public class GUI{
         }
     }
 
-    private void handleTransfer() {
+    private void handleTransfer() { //계좌 금액 송금 메솓
         try {
             int[] tmp = getNumberTextSplit(2, ",");
             if (tmp != null) {
@@ -224,7 +224,7 @@ public class GUI{
         }
     }
 
-    public IAccount getAccount(int number){
+    private IAccount getAccount(int number){ // 번호로 계좌 불러오기
         for (IAccount accountTmp : this.accountList){
             if (accountTmp.getAccountNumber()==number){
                 return accountTmp;
