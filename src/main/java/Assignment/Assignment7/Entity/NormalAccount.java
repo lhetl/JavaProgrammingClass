@@ -1,6 +1,8 @@
 package Assignment.Assignment7.Entity;
 
-public class NormalAccount extends Account {
+import Assignment.Assignment7_add.Entity.IAccount;
+
+public class NormalAccount extends Account{
     public NormalAccount(int number, int amount) {
         super(number, amount);
     }
