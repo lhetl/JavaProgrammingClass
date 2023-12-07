@@ -57,7 +57,7 @@ public class GUIBoundary {
         String tmp=mainGUI.getAmountField();
         String[] tmp2=tmp.split(",");
         if (tmp2.length<2 || tmp2.length>3){
-            throw new ValueErrorException("잘못된 형식이 입력되었습니다.");
+            throw new ValueErrorException();
         }
         int amount=Integer.parseInt(tmp2[0]);
         char type=tmp2[1].charAt(0);

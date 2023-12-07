@@ -2,6 +2,7 @@ package Assignment.Assignment7_add.Repository;
 import Assignment.Assignment7_add.Entity.*;
 import Assignment.Assignment7_add.Exception.NullAccountException;
 
+import javax.lang.model.type.NullType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class AccountRepository {
             }
         }
         if (account == null) {
-            throw new NullAccountException("존재하지 않는 계좌입니다");
+            throw new NullAccountException();
         } else {
             return account;
         }

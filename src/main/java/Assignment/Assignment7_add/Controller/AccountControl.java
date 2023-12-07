@@ -10,6 +10,7 @@ import Assignment.Assignment7_add.Dto.Response.TransferResponseDto;
 import Assignment.Assignment7_add.Dto.Response.UpdateResponseDto;
 import Assignment.Assignment7_add.Entity.MinusAccount;
 import Assignment.Assignment7_add.Entity.NormalAccount;
+import Assignment.Assignment7_add.Exception.OverWithdrawException;
 import Assignment.Assignment7_add.Exception.ValueErrorException;
 import Assignment.Assignment7_add.Repository.AccountRepository;
 
@@ -29,7 +30,7 @@ public class AccountControl {
         if (account.withdraw(dto.amount())){
             return UpdateResponseDto.toDto(account, dto.amount());
         }else{
-            throw new ValueErrorException("출금할 수 있는 한도를 넘었습니다");
+            throw new OverWithdrawException();
         }
     }
 
@@ -45,7 +46,7 @@ public class AccountControl {
             accountDepo.deposit(amount);
             return TransferResponseDto.toDto(accountWith,accountDepo,amount);
         }else {
-            throw new ValueErrorException("출금할 수 있는 한도를 넘었습니다");
+            throw new OverWithdrawException();
         }
     }
     public OpenMinusResponseDto openMinus(OpenRequestDto dto){

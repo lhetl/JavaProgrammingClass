@@ -1,5 +1,6 @@
 package Assignment.Assignment7_add.Entity.GUI;
 
+import Assignment.Assignment7_add.Exception.NotIntegerException;
 import Assignment.Assignment7_add.Exception.ValueErrorException;
 
 import javax.swing.*;
@@ -26,14 +27,14 @@ public class MainGUI {
         try {
             return Integer.parseInt(this.amountTextField.getText());
         }catch(Exception e){
-            throw new ValueErrorException("숫자만 입력해주세요.");
+            throw new NotIntegerException();
         }
     }
     public int[] getAccountNumberSplit(int textLength,String splitText){ //계좌 번호 텍스트 필드 끊어서 가져오기
         try{
             String[] tmp=this.numberTextField.getText().split(splitText);
             if (tmp.length!=textLength){
-                throw new ValueErrorException(textLength+"개의 숫자를 입력해주세요");
+                throw new ValueErrorException();
             }
             int[] tmp2=new int[textLength];
             for (int i=0;i<tmp2.length;i++){
@@ -41,14 +42,14 @@ public class MainGUI {
             }
             return tmp2;
         }catch (Exception e){
-            throw new ValueErrorException("잘못된 형식이 입력되었습니다");
+            throw new NotIntegerException();
         }
     }
-    public Integer getAccountNumberInt(){  //계좌 번호 텍스트 필드 int값 체크 + 가져오기
+    public Integer getAccountNumberInt(){
         try {
             return Integer.parseInt(this.numberTextField.getText());
         }catch(Exception e){
-            throw new ValueErrorException("숫자만 입력해주세요.");
+            throw new NotIntegerException();
         }
     }
     public void setText(String msg){ //결과 텍스트 값 설정
