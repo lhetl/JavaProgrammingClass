@@ -9,6 +9,7 @@ import Assignment.Assignment7_add.Dto.Response.OpenNormalResponseDto;
 import Assignment.Assignment7_add.Dto.Response.TransferResponseDto;
 import Assignment.Assignment7_add.Dto.Response.UpdateResponseDto;
 import Assignment.Assignment7_add.Entity.GUI.MainGUI;
+import Assignment.Assignment7_add.Exception.ValueErrorException;
 
 public class GUIBoundary {
     private MainGUI mainGUI;
@@ -55,6 +56,9 @@ public class GUIBoundary {
     private void handleOpen(){
         String tmp=mainGUI.getAmountField();
         String[] tmp2=tmp.split(",");
+        if (tmp2.length<2 || tmp2.length>3){
+            throw new ValueErrorException("잘못된 형식이 입력되었습니다.");
+        }
         int amount=Integer.parseInt(tmp2[0]);
         char type=tmp2[1].charAt(0);
         int credit=0;

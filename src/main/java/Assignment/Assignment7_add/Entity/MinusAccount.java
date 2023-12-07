@@ -11,6 +11,7 @@ public class MinusAccount extends Account {
         super(number, amount);
         this.creditAmount = creditAmount;
     }
+    @Override
     public boolean withdraw(int amount){
         if (amount<=balance+creditAmount){
             balance-=amount;
