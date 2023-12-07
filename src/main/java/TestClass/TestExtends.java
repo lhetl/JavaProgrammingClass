@@ -12,6 +12,6 @@ public class TestExtends {
         MinusAccount tmp2=new MinusAccount(1,1,1);
         tmp.add(tmp2);
         MinusAccount tmp3 = (MinusAccount) tmp.get(0);
-        System.out.println(tmp3.getCreditAmount());
+//        System.out.println(tmp3.getCreditAmount());
     }
 }

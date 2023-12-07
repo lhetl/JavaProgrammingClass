@@ -1,10 +1,11 @@
 package Assignment.Assignment7_add.Repository;
 import Assignment.Assignment7_add.Entity.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AccountRepository {
-    private List<IAccount> accountList;
+    private List<IAccount> accountList=new ArrayList<>();
     public AccountRepository(){
         IAccount acc1 = new NormalAccount(1, 10000); //계좌 기본값
         IAccount acc2 = new MinusAccount(2, 50000, 10000);

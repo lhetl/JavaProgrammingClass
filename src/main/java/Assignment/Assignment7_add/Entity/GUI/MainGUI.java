@@ -18,6 +18,14 @@ public class MainGUI {
     private JButton openButton = new JButton();
     private JButton transferButton = new JButton();
     private boolean displayCheck=false;
+    public String getAmountField(){
+        try{
+            String tmp=this.amountTextField.getText();
+            return tmp;
+        }catch (Exception e){
+            throw new RuntimeException();
+        }
+    }
     public Integer getAmountText(){ // 가격 텍스트 필드 int 값 체크 + 가져오기
         try {
             int tmp=Integer.parseInt(this.amountTextField.getText());
