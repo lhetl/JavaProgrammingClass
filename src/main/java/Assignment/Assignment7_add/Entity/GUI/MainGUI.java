@@ -1,5 +1,6 @@
 package Assignment.Assignment7_add.Entity.GUI;
 
+import Assignment.Assignment7_add.Exception.MainErrorException;
 import Assignment.Assignment7_add.Exception.NotIntegerException;
 import Assignment.Assignment7_add.Exception.ValueErrorException;
 
@@ -82,7 +83,6 @@ public class MainGUI {
 
     public MainGUI() {
         this.jframe = new JFrame();
-
         jframe.setTitle("은행 애플리케이션"); //frame 기본 설정
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setLayout(new GridBagLayout());

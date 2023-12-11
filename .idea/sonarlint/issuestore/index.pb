@@ -166,8 +166,6 @@ p
 @src/main/java/Assignment/Assignment7_add/Entity/GUI/OpenGUI.java,c\6\c67be9babd768c1796562ed674975b4e4acfa732
 q
 Asrc/main/java/Assignment/Assignment7_add/Entity/GUI/ErrorGUI.java,9\e\9ed489259df3fa9b6dcb99e2b485f59752e75fcb
-x
-Hsrc/main/java/Assignment/Assignment7_add/Exception/ValueOfException.java,e\d\ed898f1927bc9b0e6100e7b4059576e9ce393de1
 {
 Ksrc/main/java/Assignment/Assignment7_add/Exception/ValueErrorException.java,c\5\c5f8d8abaa2137df8a33fd032b4dd8f1a7b1bf48
 r
@@ -176,8 +174,6 @@ Bsrc/main/java/Assignment/Assignment7_add/Entity/NormalAccount.java,1\8\1803cff
 Lsrc/main/java/Assignment/Assignment7_add/Exception/NullAccountException.java,5\1\516be397656ce1d4652294cfdd0d36d7f09fefad
 z
 Jsrc/main/java/Assignment/Assignment7_add/Exception/MainErrorException.java,c\e\ce2e7015d2ed7f14bb524df307303ec350a635c6
-{
-Ksrc/main/java/Assignment/Assignment7_add/Exception/AmountOverException.java,e\0\e0978e0111099209f31749d1304b8566c394cbcb
 }
 Msrc/main/java/Assignment/Assignment7_add/Exception/OverWithdrawException.java,8\d\8db7546fa723ce640d008f252921519293331159
 {
