@@ -12,6 +12,7 @@ public record OpenRequestDto(
     public IAccount toEntity(int lastNumber){
         char upperChar=Character.toUpperCase(this.type);
         IAccount accountTmp;
+        lastNumber++;
         if (upperChar=='M'){
             accountTmp=new MinusAccount(lastNumber,this.amount,this.creditAmount);
         } else if (upperChar == 'N') {

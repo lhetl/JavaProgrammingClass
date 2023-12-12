@@ -1,6 +1,5 @@
 package Assignment.Assignment7_add.Entity.GUI;
 
-import Assignment.Assignment7_add.Exception.MainErrorException;
 import Assignment.Assignment7_add.Exception.NotIntegerException;
 import Assignment.Assignment7_add.Exception.ValueErrorException;
 
@@ -24,6 +23,21 @@ public class MainGUI {
     public String getAmountField(){
         return this.amountTextField.getText();
     }
+    public String[] getAmountSplitInt(String splitChar){
+        String[] tmp=this.amountTextField.getText().split(splitChar);
+        if(tmp.length<1 || tmp.length>2){
+            throw new ValueErrorException();
+        }
+        try{
+            int tmpInt=Integer.parseInt(tmp[0]);
+            if(tmp.length==2){
+                tmpInt=Integer.parseInt(tmp[1]);
+            }
+        }catch(Exception e){
+            throw new NotIntegerException();
+        }
+        return tmp;
+    }
     public Integer getAmountText(){ // 가격 텍스트 필드 int 값 체크 + 가져오기
         try {
             return Integer.parseInt(this.amountTextField.getText());
@@ -32,11 +46,11 @@ public class MainGUI {
         }
     }
     public int[] getAccountNumberSplit(int textLength,String splitText){ //계좌 번호 텍스트 필드 끊어서 가져오기
+        String[] tmp=this.numberTextField.getText().split(splitText);
+        if (tmp.length!=textLength){
+            throw new ValueErrorException();
+        }
         try{
-            String[] tmp=this.numberTextField.getText().split(splitText);
-            if (tmp.length!=textLength){
-                throw new ValueErrorException();
-            }
             int[] tmp2=new int[textLength];
             for (int i=0;i<tmp2.length;i++){
                 tmp2[i]=Integer.parseInt(tmp[i]);
@@ -46,6 +60,7 @@ public class MainGUI {
             throw new NotIntegerException();
         }
     }
+
     public Integer getAccountNumberInt(){
         try {
             return Integer.parseInt(this.numberTextField.getText());
@@ -104,7 +119,7 @@ public class MainGUI {
         depositButton.setText("입금");
         withdrawButton.setText("출금");
         balanceButton.setText("잔액 조회");
-        openButton.setText("<html><body><center>계좌 추가<br>(금액: 금액,계좌 타입 앞글자,한도 금액))</center></body></html>");
+        openButton.setText("<html><body><center>계좌 추가<br>(금액: 금액,한도 금액) <br>(한도 금액 입력시 마이너스 계좌로 생성됨))</center></body></html>");
         transferButton.setText("<html><body><center>계좌 이체<br>(계좌 번호: 송출 계좌 번호,대상 계좌 번호 ) )</center></body></html>");
         openButton.setFont(new Font(openButton.getFont().getFontName(),openButton.getFont().getStyle(),11));
         transferButton.setFont(new Font(transferButton.getFont().getFontName(),transferButton.getFont().getStyle(),11));

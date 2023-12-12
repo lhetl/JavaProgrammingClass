@@ -1,13 +1,10 @@
 package Assignment.Assignment7_add.Controller;
 
+import Assignment.Assignment7_add.Dto.Response.*;
 import Assignment.Assignment7_add.Entity.IAccount;
 import Assignment.Assignment7_add.Dto.Request.UpdateRequestDto;
 import Assignment.Assignment7_add.Dto.Request.TransferRequestDto;
 import Assignment.Assignment7_add.Dto.Request.OpenRequestDto;
-import Assignment.Assignment7_add.Dto.Response.OpenMinusResponseDto;
-import Assignment.Assignment7_add.Dto.Response.OpenNormalResponseDto;
-import Assignment.Assignment7_add.Dto.Response.TransferResponseDto;
-import Assignment.Assignment7_add.Dto.Response.UpdateResponseDto;
 import Assignment.Assignment7_add.Entity.MinusAccount;
 import Assignment.Assignment7_add.Entity.NormalAccount;
 import Assignment.Assignment7_add.Exception.OverWithdrawException;
@@ -49,15 +46,19 @@ public class AccountControl {
             throw new OverWithdrawException();
         }
     }
-    public OpenMinusResponseDto openMinus(OpenRequestDto dto){
-        MinusAccount account = (MinusAccount) dto.toEntity(accountRepository.getLastNumber());
-        accountRepository.saveAccount(account);
-        return OpenMinusResponseDto.toDto(account);
-    }
-    public OpenNormalResponseDto openNormal(OpenRequestDto dto){
-        NormalAccount account =(NormalAccount) dto.toEntity(accountRepository.getLastNumber());
-        accountRepository.saveAccount(account);
-        return OpenNormalResponseDto.toDto(account);
+    public OpenResponseDto openAccount(OpenRequestDto dto){
+        if (dto.type()=='M'){
+            MinusAccount accountM = (MinusAccount) dto.toEntity(accountRepository.getLastNumber());
+            accountRepository.saveAccount(accountM);
+            return OpenResponseDto.toDto(accountM);
+        }else if (dto.type()=='N'){
+            NormalAccount accountN = (NormalAccount) dto.toEntity(accountRepository.getLastNumber());
+            accountRepository.saveAccount(accountN);
+            return OpenResponseDto.toDto(accountN);
+        }else{
+            throw new ValueErrorException();
+        }
+
     }
 
 }

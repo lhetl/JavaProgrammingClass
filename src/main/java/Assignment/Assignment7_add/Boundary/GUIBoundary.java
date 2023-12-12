@@ -4,12 +4,8 @@ import Assignment.Assignment7_add.Controller.AccountControl;
 import Assignment.Assignment7_add.Dto.Request.OpenRequestDto;
 import Assignment.Assignment7_add.Dto.Request.TransferRequestDto;
 import Assignment.Assignment7_add.Dto.Request.UpdateRequestDto;
-import Assignment.Assignment7_add.Dto.Response.OpenMinusResponseDto;
-import Assignment.Assignment7_add.Dto.Response.OpenNormalResponseDto;
-import Assignment.Assignment7_add.Dto.Response.TransferResponseDto;
-import Assignment.Assignment7_add.Dto.Response.UpdateResponseDto;
+import Assignment.Assignment7_add.Dto.Response.*;
 import Assignment.Assignment7_add.Entity.GUI.MainGUI;
-import Assignment.Assignment7_add.Exception.ValueErrorException;
 
 public class GUIBoundary {
     private MainGUI mainGUI;
@@ -54,24 +50,20 @@ public class GUIBoundary {
         mainGUI.setText(responseDto.toString());
     }
     private void handleOpen(){
-        String tmp=mainGUI.getAmountField();
-        String[] tmp2=tmp.split(",");
-        if (tmp2.length<2 || tmp2.length>3){
-            throw new ValueErrorException();
+        String[] tmp=mainGUI.getAmountSplitInt(",");
+        char type='N';
+        if (tmp.length==2){
+            type='M';
+        }else if (tmp.length==1){
+            type='N';
         }
-        int amount=Integer.parseInt(tmp2[0]);
-        char type=tmp2[1].charAt(0);
+        int amount = Integer.parseInt(tmp[0]);
         int credit=0;
-        if(type=='M'){
-            credit=Integer.parseInt(tmp2[2]);
+
+        if (type == 'M') {
+            credit = Integer.parseInt(tmp[1]);
         }
-        OpenRequestDto dto =new OpenRequestDto(type,amount,credit);
-        if (type=='M'){
-            OpenMinusResponseDto responseDto=this.accountControl.openMinus(dto);
-            mainGUI.setText(responseDto.toString());
-        }else{
-            OpenNormalResponseDto responseDto=this.accountControl.openNormal(dto);
-            mainGUI.setText(responseDto.toString());
-        }
+        OpenResponseDto responseDto = this.accountControl.openAccount(new OpenRequestDto(type, amount, credit));
+        mainGUI.setText(responseDto.toString());
     }
 }
